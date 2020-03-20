@@ -27,8 +27,10 @@ public class StringTable {
     {
     	this.nBuckets = nBuckets;
     	buckets = new LinkedList[nBuckets];
-	
-    	// TODO - fill in the rest of this method to initialize your table
+    	size = 0;
+    	for (int i = 0; i < nBuckets; i++) {
+    		buckets[i] = new LinkedList<Record>();
+    	}
     }
     
     
@@ -42,8 +44,16 @@ public class StringTable {
     public boolean insert(Record r) 
     {  
     	// TODO - implement this method
-	
-    	return false;
+    	int index = toIndex(stringToHashCode(r.key));
+    	
+    	for(int i = 0; i < buckets[index].size(); i++){
+    		if(buckets[index].get(i).key.equals(r.key)) { 
+        		return false;
+        	}
+    	}
+    	buckets[index].add(r);
+    	size++;
+	    return true;
     }
     
     
@@ -55,9 +65,16 @@ public class StringTable {
      */
     public Record find(String key) 
     {
+    	int index = toIndex(stringToHashCode(key));
     	// TODO - implement this method
-	
-    	return null;
+    	if(buckets[index] != null) {
+    		for(int i = 0; i < buckets[index].size(); i++) {
+    			if(buckets[index].get(i).key.equals(key)) {
+    				return buckets[index].get(i); //FIXME?
+    			}
+    		}	
+    	}
+    	return null; 
     }
     
     
@@ -70,6 +87,16 @@ public class StringTable {
     public void remove(String key) 
     {
     	// TODO - implement this method
+    	int index = toIndex(stringToHashCode(key));
+    	if(index < nBuckets) {
+    		for(int i = 0; i < buckets[index].size(); i++) {
+    			if(buckets[index].get(i).key.equals(key)) {
+    				buckets[index].remove(i);
+    			}
+    		}
+    		size--;
+    	}
+    	
     }
     
 
@@ -89,8 +116,8 @@ public class StringTable {
     private int toIndex(int hashcode)
     {
     	// Fill in your own hash function here
-	
-    	return 0;
+    	int hashToIndex = (int)Math.abs(((hashcode*0.61803) % 1.0) * nBuckets);
+    	return hashToIndex;
     }
     
     
