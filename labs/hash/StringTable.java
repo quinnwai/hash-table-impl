@@ -88,14 +88,12 @@ public class StringTable {
     {
     	// TODO - implement this method
     	int index = toIndex(stringToHashCode(key));
-    	if(index < nBuckets) {
-    		for(int i = 0; i < buckets[index].size(); i++) {
-    			if(buckets[index].get(i).key.equals(key)) {
-    				buckets[index].remove(i);
-    			}
-    		}
-    		size--;
-    	}
+    	for(int i = 0; i < buckets[index].size(); i++) {
+			if(buckets[index].get(i).key.equals(key)) {
+				buckets[index].remove(i);
+			}
+		}
+		size--;	
     	
     }
     
