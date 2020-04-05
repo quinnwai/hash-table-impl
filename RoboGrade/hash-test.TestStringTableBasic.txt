@@ -1,0 +1,77 @@
+-------------------
+CSE247 Robot tester starts testing hash on 2020-04-04 20:03:07 -0500
+
+========
+Testing in ./GradingRepos/repos/cse247-s20-students-lab7-quinnwai: hash as of  2020-03-21 00:01
+========
+Now in: /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai
+Your branch is up to date with 'origin/master'.
+HEAD is now at 964cbe7 Lab 7!
+No local changes to save
+
+Updating 964cbe7..181bccc
+Fast-forward
+ RoboGrade/hash-test.TestStringTableFast.txt | 119 ++++++++++++++++++++++++++++
+ 1 file changed, 119 insertions(+)
+ create mode 100644 RoboGrade/hash-test.TestStringTableFast.txt
+Going back in time to:  2020-03-21 00:01
+At hash 964cbe7517701745c8c03b15f95d1950ee38cd4a
+
+Buildfile: /mnt/c/Users/coles/git/cse247/cse247-s20-support/build.xml
+
+copytest:
+     [echo] would copy from /mnt/c/Users/coles/git/cse247/cse247-s20-tas-labs-source/ key quinnwai testfilesource test/TestStringTableBasic package hash repo ./GradingRepos/repos/cse247-s20-students-lab7-quinnwai
+     [copy] Copying 1 file to /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai/labs/hash/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /mnt/c/Users/coles/git/cse247/cse247-s20-support/build.xml
+
+copytest:
+     [echo] would copy from /mnt/c/Users/coles/git/cse247/cse247-s20-tas-labs-source/ key quinnwai testfilesource SeqReader package hash repo ./GradingRepos/repos/cse247-s20-students-lab7-quinnwai
+     [copy] Copying 1 file to /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai/labs/hash
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /mnt/c/Users/coles/git/cse247/cse247-s20-support/build.xml
+
+compile:
+     [echo] Compiling hash/StringTable
+    [mkdir] Created dir: /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai/bin
+    [javac] Compiling 1 source file to /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /mnt/c/Users/coles/git/cse247/cse247-s20-support/build.xml
+
+compile:
+     [echo] Compiling hash/test/TestStringTableBasic
+    [javac] Compiling 1 source file to /mnt/c/Users/coles/git/cse247/cse247-s20-support/GradingRepos/repos/cse247-s20-students-lab7-quinnwai/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test test.TestStringTableBasic
+Buildfile: /mnt/c/Users/coles/git/cse247/cse247-s20-support/build.xml
+
+test:
+    [junit] Running hash.test.TestStringTableBasic
+    [junit] Testsuite: hash.test.TestStringTableBasic
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+    [junit] 
+    [junit] Testcase: testFind took 0.032 sec
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.005 sec
+    [junit] Testcase: testZeroHash took 0.002 sec
+    [junit] Testcase: testInsert took 0.001 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing hash on 2020-04-04 20:03:14 -0500
+-------------------
