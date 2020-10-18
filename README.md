@@ -14,3 +14,6 @@ The most important functions are `StringTable`, `insert`, `find`, `remove`, and 
  - `public Record find(String key)`: Iteratively searches through the bucket for a key, returning the key’s record if found and null otherwise. To associate the key with a bucket, the method calls on the StringToHashCode and toIndex method to convert the String key into an integer hashcode and then index of a specific bucket.
  - `public void remove(String key)`: Iteratively searches through a bucket for a key, removing the record containing the key if found. To associate the key with a bucket, the method calls on the StringToHashCode and toIndex method to convert the String key into an integer hashcode and then index of a specific bucket.
  - `private int toIndex(int hashcode)`: Creates an index that is less than the number of buckets (nBuckets) so that each key is always associated with the same index within the hash table
+ 
+## Asymptotic Complexity
+Ideally, if there was a fixed load factor, the amortized average-case cost would be &Theta;(1).
